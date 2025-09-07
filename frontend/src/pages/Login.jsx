@@ -178,6 +178,9 @@ const Login = () => {
              </button>
 
              <p onClick={()=>navigate('/forgot-password')} >Forgot password</p>
+             <p onClick={()=>navigate('signup')} >
+              SignUp
+             </p>
            </motion.div>
          </form>
        </motion.div>
