@@ -2,7 +2,7 @@ import axios from 'axios';
 import React ,{useReducer}from 'react'
 import { useNavigate } from 'react-router-dom';
 import {motion} from 'framer-motion'
-import { User, Mail, Lock, Eye, EyeOff } from "lucide-react"
+import {  Mail, Lock, Eye, EyeOff } from "lucide-react"
 import { toast } from 'sonner';
 
 const Login = () => {
