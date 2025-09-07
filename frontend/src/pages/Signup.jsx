@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom"
 
 const Signup = () => {
   const backendUrl = import.meta.env.VITE_BACKEND_URL
+  console.log()
   const navigate=useNavigate()
 
   const initialState = {
@@ -58,6 +59,7 @@ const Signup = () => {
         email: state.email,
         password: state.password
       })
+      console.log(response)
       if (response.data.success) {
         toast.success("Verification email sent")
         toast.success(response.data.message)
@@ -71,7 +73,7 @@ const Signup = () => {
       
     } catch (error) {
       console.error("Signup error:", error)
-      toast.error(error.message)
+      toast.error(error?.response.data.message||"some thing went wrong")
      
     } finally {
       dispatch({ type: "setLoading", payload: false })

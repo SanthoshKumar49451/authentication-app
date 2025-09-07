@@ -176,11 +176,13 @@ const Login = () => {
                  </motion.div>
                )}
              </button>
-
+<div className='flex gap-5' >
+  
              <p onClick={()=>navigate('/forgot-password')} >Forgot password</p>
-             <p onClick={()=>navigate('signup')} >
+             <p onClick={()=>navigate('/signup')} >
               SignUp
              </p>
+</div>
            </motion.div>
          </form>
        </motion.div>
